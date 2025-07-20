@@ -28,6 +28,7 @@ SECRET_KEY = "django-insecure-^eb1h2v4x5t31-_66+8vthtv5nq!$mcnnggr%frlt*j=d)k^x1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+CORS_ALLOW_ALL_ORIGINS = True  # For development
 
 ALLOWED_HOSTS = []
 
@@ -52,7 +53,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'alx_travel_app.urls'
 
